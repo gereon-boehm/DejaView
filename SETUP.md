@@ -3,7 +3,7 @@
 ## 1. Customize Your Project
 
 1. **Update `pyproject.toml`**: Change `name`, `description`, and `authors`
-2. **Rename the package**: `src/your_package/` → `src/your_actual_package_name/`
+2. **Rename the package**: `src/dejaview/` → `src/your_actual_package_name/`
 3. **Update imports**: Fix package name in `tests/test_main.py`
 
 ## 2. Get Started

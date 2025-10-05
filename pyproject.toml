@@ -1,9 +1,9 @@
 [project]
-name = "your-package"
+name = "dejaview"
 version = "0.1.0"
-description = "A modern Python package"
+description = "DejaView is an AI-driven photo cleaner that detects duplicate or similar images, ranks them by quality, and adapts to your personal preferences through feedback — a smart photo déjà vu detector that takes action."
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Gereon Böhm", email = "gereon.boehm@gmail.com"}
 ]
 readme = "README.md"
 license = {text = "MIT"}
@@ -33,7 +33,7 @@ Repository = "https://github.com/yourusername/your-package"
 Issues = "https://github.com/yourusername/your-package/issues"
 
 [project.scripts]
-your-package = "your_package.main:main"
+your-package = "dejaview.main:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -69,7 +69,7 @@ ignore = [
 "tests/**/*" = ["ARG", "S101"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["your_package"]
+known-first-party = ["dejaview"]
 
 [tool.mypy]
 python_version = "3.12"

@@ -2,7 +2,7 @@
 
 import pytest
 
-from your_package.main import hello
+from dejaview.main import hello
 
 
 def test_hello_default():

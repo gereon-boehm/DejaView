@@ -53,7 +53,7 @@ uv add --dev <package>        # Add development dependency
 
 ### Running commands
 ```bash
-uv run python -m your_package  # Run your package
+uv run python -m dejaview  # Run your package
 uv run pytest                  # Run tests
 uv run mypy src/               # Type checking
 uv run ruff check              # Linting
@@ -64,7 +64,7 @@ uv run ruff format             # Formatting
 
 ```
 ├── src/
-│   └── your_package/
+│   └── dejaview/
 │       ├── __init__.py
 │       └── main.py
 ├── tests/
