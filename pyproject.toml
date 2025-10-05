@@ -25,6 +25,19 @@ dev = [
     "ruff>=0.6",
     "pre-commit>=3.5",
 ]
+vision = [
+    # Core scientific stack
+    "numpy",
+    "pandas",
+    # CV + image IO
+    "opencv-python",
+    "Pillow",
+    # ML
+    "scikit-learn",
+    # Deep embeddings (optional DINO)
+    "torch",
+    "torchvision",
+]
 
 [project.urls]
 Homepage = "https://github.com/yourusername/your-package"
@@ -34,6 +47,7 @@ Issues = "https://github.com/yourusername/your-package/issues"
 
 [project.scripts]
 your-package = "dejaview.main:main"
+dejaview-dedup = "dejaview.dedup:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -121,4 +135,12 @@ exclude_lines = [
     "if __name__ == .__main__.:",
     "class .*\\bProtocol\\):",
     "@(abc\\.)?abstractmethod",
+]
+
+[tool.uv.sources]
+dejaview = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "dejaview",
 ]

@@ -1,30 +1,12 @@
-"""Tests for main module."""
+"""Basic smoke tests after removing Hello World functionality."""
 
-import pytest
-
-from dejaview.main import hello
+from dejaview import __version__, DeduplicationPipeline
 
 
-def test_hello_default():
-    """Test hello function with default argument."""
-    result = hello()
-    assert result == "Hello, World!"
+def test_version_present():
+    assert isinstance(__version__, str) and __version__
 
 
-def test_hello_with_name():
-    """Test hello function with custom name."""
-    result = hello("Python")
-    assert result == "Hello, Python!"
-
-
-@pytest.mark.parametrize(
-    "name,expected",
-    [
-        ("Alice", "Hello, Alice!"),
-        ("Bob", "Hello, Bob!"),
-        ("", "Hello, !"),
-    ],
-)
-def test_hello_parametrized(name, expected):
-    """Test hello function with various inputs."""
-    assert hello(name) == expected
+def test_pipeline_class_available():
+    # Just ensure the attribute is exported; heavy deps are lazy.
+    assert DeduplicationPipeline is not None
